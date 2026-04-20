@@ -10,7 +10,7 @@ const LoginScreen = ({ navigation }) => {
   const handleLogin = async () => {
     if (email && password) {
       await AsyncStorage.setItem('token', 'dummy-token');
-      navigation.replace('HomeScreen');
+      navigation.replace('MainApp');
     } else {
       alert('Enter details');
     }
