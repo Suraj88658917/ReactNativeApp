@@ -20,7 +20,7 @@ const TabNavigation = () => {
           if (route.name === 'Job') {
             iconName = 'briefcase';
           } else if (route.name === 'Collection') {
-            iconName = 'albums';
+            iconName = 'albums'; 
           } else if (route.name === 'Message') {
             iconName = 'chatbubble';
           }
@@ -32,9 +32,9 @@ const TabNavigation = () => {
         tabBarInactiveTintColor: 'gray',
       })}
     >
-      <Tab.Screen name="JobScreen" component={JobScreen} />
-      <Tab.Screen name="CollectionScreen" component={CollectionScreen} />
-      <Tab.Screen name="MessageScreen" component={MessageScreen} />
+      <Tab.Screen name="Job" component={JobScreen} />
+      <Tab.Screen name="Collection" component={CollectionScreen} />
+      <Tab.Screen name="Message" component={MessageScreen} />
     </Tab.Navigator>
   );
 };
