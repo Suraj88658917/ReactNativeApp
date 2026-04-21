@@ -149,7 +149,7 @@ const LoginScreen = ({ navigation }) => {
 
 
           <View style={{ marginTop: wp("2%") }}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("ForgotScreen")}>
               <Text style={{ color: COLORS.green, fontFamily: FONTS.bold, fontSize: wp("3.3%") }}>Forgot password?</Text>
             </TouchableOpacity>
           </View>
