@@ -45,23 +45,51 @@ const JobScreen = () => {
       title: "Bartender for a restaurant – Green\nStreet + medical insurance",
       status: "suggested Jobs",
     },
-    // {
-    //   id: "2",
-    //   logo1: SideLogo1,
-    //   logo2: Arrow,
-    //   title: "Johnny’s Best",
-    //   status: "suggested Jobs",
-    // },
-    // {
-    //   id: "3",
-    //   title: "Android Developer",
-    //   status: "Applied",
-    // },
-    // {
-    //   id: "4",
-    //   title: "Node Backend",
-    //   status: "Saved",
-    // },
+    {
+      id: "2",
+      logo1: SideLogo1,
+      logo2: Arrow,
+      title: "Johnny’s Best",
+      status: "suggested Jobs",
+    },
+     {
+      id: "3",
+      logo1: SideLogo,
+      logo2: Dots,
+      title: "Bartender for a restaurant – Green\nStreet + medical insurance",
+      status: "suggested Jobs",
+    },
+    {
+      id: "4",
+      logo1: SideLogo1,
+      logo2: Arrow,
+      title: "Johnny’s Best",
+      status: "suggested Jobs",
+    },
+     {
+      id: "5",
+      logo1: SideLogo,
+      logo2: Dots,
+      title: "Bartender for a restaurant – Green\nStreet + medical insurance",
+      status: "suggested Jobs",
+    },
+    {
+      id: "6",
+      logo1: SideLogo1,
+      logo2: Arrow,
+      title: "Johnny’s Best",
+      status: "suggested Jobs",
+    },
+    {
+      id: "7",
+      title: "Android Developer",
+      status: "Applied",
+    },
+    {
+      id: "8",
+      title: "Node Backend",
+      status: "Saved",
+    },
   ];
 
   //  Filter
@@ -85,26 +113,28 @@ const JobScreen = () => {
       <View style={styles.card}>
         <View style={styles.rowBetween}>
           <View style={styles.row}>
-            {Logo1 && <Logo1 width={wp("10%")} height={wp("10%")} />}
+            {Logo1 && <Logo1 width={wp("13%")} height={wp("10%")} />}
             <Text style={styles.title}>{item.title}</Text>
           </View>
 
           {Logo2 && (
-            <TouchableOpacity>
-              <Logo2 width={wp("5%")} height={wp("5%")} />
+           <View>
+             <TouchableOpacity>
+              <Logo2 width={wp("7%")} height={wp("7%")} />
             </TouchableOpacity>
+            </View>
           )}
         </View>
 
         {/* DATE */}
-        <View style={{ paddingHorizontal: wp("12%") }}>
+        <View style={{ paddingHorizontal: wp("15%") }}>
           <Text style={{ fontSize: wp("3%"), color: "#999", fontFamily: FONTS.regular }}>
             Published Jan 23
           </Text>
         </View>
 
         {/* COMPANY */}
-        <View style={{ flexDirection: "row", marginTop: hp("0.5%"), paddingHorizontal: wp("11%") }}>
+        <View style={{ flexDirection: "row", marginTop: hp("0.5%"), paddingHorizontal: wp("15%") }}>
           <Text style={{ fontSize: wp("3%"), fontFamily: FONTS.bold }}>
             Johnny’s Best
           </Text>
@@ -114,7 +144,7 @@ const JobScreen = () => {
         </View>
 
         {/* SHIFT */}
-        <View style={{ flexDirection: "row", marginTop: hp("1%"), gap: wp("1%"), paddingHorizontal: wp("11%") }}>
+        <View style={{ flexDirection: "row", marginTop: hp("1%"), gap: wp("1%"), paddingHorizontal: wp("15%") }}>
           <Bagicon width={wp("5%")} height={wp("5%")} />
           <Text style={{ fontSize: wp("3%"), fontFamily: FONTS.bold }}>
             Shift position • Shift starts 24 Jan 5 PM
@@ -122,13 +152,13 @@ const JobScreen = () => {
         </View>
 
         {/* SALARY */}
-        <View style={{ flexDirection: "row", marginTop: hp("1%"), gap: wp("1%"), paddingHorizontal: wp("11%") }}>
+        <View style={{ flexDirection: "row", marginTop: hp("1%"), gap: wp("1%"), paddingHorizontal: wp("15%") }}>
           <Money width={wp("5%")} height={wp("5%")} />
           <Text style={{ fontSize: wp("3%"), fontFamily: FONTS.bold }}>$250</Text>
         </View>
 
         {/* DESCRIPTION */}
-        <View style={{ marginTop: hp("1%"), gap: wp("1%"), paddingHorizontal: wp("11%") }}>
+        <View style={{ marginTop: hp("1%"), gap: wp("1%"), paddingHorizontal: wp("15%") }}>
           <Text style={{ fontSize: wp("3.3%"), fontFamily: FONTS.regular }}>
             URGENT!!
           </Text>
@@ -138,7 +168,7 @@ const JobScreen = () => {
         </View>
 
         {/* LINK */}
-        <View style={{ marginTop: hp("1%"), gap: wp("1%"), paddingHorizontal: wp("11%") }}>
+        <View style={{ marginTop: hp("1%"), gap: wp("1%"), paddingHorizontal: wp("15%") }}>
           <TouchableOpacity>
             <Text style={{ fontSize: wp("3%"), fontFamily: FONTS.bold, color: COLORS.green }}>
               Learn more
@@ -326,8 +356,8 @@ const styles = StyleSheet.create({
 
   row: {
     flexDirection: "row",
-    alignItems: "flex-start",
     gap: wp("2%"),
+    width:wp("80%")
   },
 
   rowBetween: {
@@ -340,7 +370,7 @@ const styles = StyleSheet.create({
     paddingVertical: hp("2%"),
     backgroundColor: "#fff",
     marginTop: hp("1%"),
-    paddingHorizontal: wp("4%"),
+    paddingHorizontal: wp("3%"),
   },
 
   title: {

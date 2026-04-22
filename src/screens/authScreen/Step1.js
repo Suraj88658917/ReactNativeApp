@@ -421,9 +421,7 @@ const Step1 = ({ navigation }) => {
                 style={styles.countryBtn}
                 onPress={() => setPickerVisible(true)}
               >
-                <View style={styles.countryBox}>
-
-                  <Flag
+                   <Flag
                     countryCode={countryCode}
                     size={18}
                   />
@@ -434,7 +432,7 @@ const Step1 = ({ navigation }) => {
 
                   <Text style={{ marginLeft: 4 }}>▼</Text>
 
-                </View>
+                {/* </View> */}
               </TouchableOpacity>
               {/* PHONE INPUT */}
               <TextInput
@@ -656,20 +654,24 @@ const styles = StyleSheet.create({
     borderColor: "#ccc",
     borderRadius: 8,
     marginTop: hp("1%"),
+     overflow: "hidden",
   },
 
   countryBtn: {
-    paddingHorizontal: 10,
-    paddingVertical: 12,
-    borderRightWidth: 1,
-    borderColor: "#ccc",
-    flexDirection: "row"
+   flexDirection: "row",
+  alignItems: "center",
+  paddingHorizontal: wp("3%"),
+  paddingVertical: hp("1.5%"),
+  borderRightWidth: 1,
+  borderColor: "#ccc",
+  gap: wp("2%"),
   },
 
   phoneInput: {
     flex: 1,
-    paddingHorizontal: 10,
-  },
+  paddingHorizontal: wp("3%"),
+  fontSize: wp("3.8%"),
+},
   countryBox: {
     flexDirection: "row",
     alignItems: "center",
@@ -680,8 +682,7 @@ const styles = StyleSheet.create({
 
   codeText: {
     fontSize: wp("3.8%"),
-    marginLeft: 6,
-    textAlignVertical: "center",
+  fontFamily: FONTS.medium,
   },
   otpContainer: {
     flexDirection: "row",
