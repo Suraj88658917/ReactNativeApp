@@ -13,5 +13,6 @@ export const COLORS = {
   green:"#00A52C",
   midWhite:"#9999",
   Button:"#F7F8FA",
-  text:"#565A63"
+  text:"#565A63",
+  
 };

@@ -7,7 +7,8 @@ import {
   TextInput,
   ScrollView,
   KeyboardAvoidingView,
-  Platform
+  Platform,
+  Alert
 } from 'react-native';
 import React, { useState , useEffect } from 'react';
 import Logo from "../../assets/Logo/AppLogo.svg";
@@ -49,6 +50,7 @@ const LoginScreen = ({ navigation }) => {
 
       if (!email || !password) {
         console.log(" Enter email & password");
+         Alert.alert('Error', 'Please fill all fields');
         return;
       }
 
